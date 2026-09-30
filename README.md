@@ -166,12 +166,6 @@ docker compose logs -f mosquitto
 - **Dashboard không cập nhật:** mở <http://localhost:8501>, nhấn `Ctrl+F5`; kiểm tra `collector` và InfluxDB có mẫu mới.
 - **Preprocess báo thiếu field:** rebuild service bằng `docker compose run --rm --build preprocess`; cần có `sensor_raw` trước khi chạy.
 
-12.Báo cáo nộp bài
-
-- Báo cáo Word: [`report/Bao_cao_Bai_2_IoT.docx`](report/Bao_cao_Bai_2_IoT.docx).
-- Mã tạo lại báo cáo: [`report/generate_report.py`](report/generate_report.py); cần Python 3 và `python-docx`.
-- Thông tin sinh viên nằm trong báo cáo Word, không đưa vào README công khai.
-
-13.An toàn khi triển khai
+12. An toàn khi triển khai
 
 Mosquitto hiện chạy anonymous trên mạng lab và MQTT port `1883` không mã hóa. Không dùng cấu hình này ngoài môi trường demo. Triển khai thực tế cần username/password, ACL, MQTT over TLS và secrets lưu ngoài repository.
